@@ -8,8 +8,20 @@
 </head>
 
 <body>
-  <h1>Welcome to Message Nest</h1>
-  <h2><%= message %></h2>
+  <h1>Welcome to <%= appTitle %></h1>
+  <h2>Following are the messages sent by different users with DAY on which tha message was sent</h2>
+  <hr>
+  <h1><a href="http://localhost:3000/new">Add new message</a></h1>
+  <hr>
+  <ul>
+    <% messages.forEach(message => { %>
+    <li>
+      <div>User: <%= message.user %></div>
+      <div>Message: <%=message.text %></div>
+      <div>Day: <%= message.added %></div>
+    </li>
+    <% }); %>
+  </ul>
 </body>
 
 </html>
