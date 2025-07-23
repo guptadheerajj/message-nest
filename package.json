@@ -1,0 +1,28 @@
+{
+	"name": "message-nest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node --watch app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/guptadheerajj/message-nest.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/guptadheerajj/message-nest/issues"
+	},
+	"homepage": "https://github.com/guptadheerajj/message-nest#readme",
+	"dependencies": {
+		"ejs": "^3.1.10",
+		"express": "^5.1.0"
+	},
+	"devDependencies": {
+		"dotenv": "^17.2.0"
+	}
+}
