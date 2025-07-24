@@ -19,6 +19,7 @@
       <div>User: <%= message.user %></div>
       <div>Message: <%=message.text %></div>
       <div>Day: <%= message.added %></div>
+      <button data-message-id="<%= message.id %>"><a href="/details?id=<%= message.id %>">Open Message Details</a></button>
     </li>
     <% }); %>
   </ul>

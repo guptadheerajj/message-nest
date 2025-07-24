@@ -14,9 +14,23 @@ async function getAllMessages() {
 async function addMessage({ text, user }) {
 	// implement error handling later
 	const messages = await getAllMessages();
-	messages.push({ text, user, added: format(new Date(), "do MMM") });
+	messages.push({
+		id: messages.length + 1,
+		text,
+		user,
+		added: format(new Date(), "do MMM"),
+	});
 
 	await fsPromise.writeFile(messagesFilePath, JSON.stringify(messages), "utf8");
 }
 
-module.exports = { getAllMessages, addMessage };
+async function getMessageById(id) {
+	const result = await fsPromise.readFile(messagesFilePath, "utf8");
+	const messages = JSON.parse(result);
+
+	const messageById = messages.find((message) => message.id === id);
+
+	return messageById;
+}
+
+module.exports = { getAllMessages, addMessage, getMessageById };
