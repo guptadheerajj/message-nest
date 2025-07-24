@@ -1,0 +1,14 @@
+[
+	{ "text": "Hi there!", "user": "Amando", "added": "12th Jun" },
+	{ "text": "Hello World!", "user": "Charles", "added": "11th Jul" },
+	{
+		"text": "My first project using Express and Nodejs",
+		"user": "Dheeraj",
+		"added": "15th Jan"
+	},
+	{
+		"text": "guptadheeraj150104@gmail.com",
+		"user": "Dheeraj",
+		"added": "24th Jul"
+	}
+]

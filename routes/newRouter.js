@@ -1,12 +1,9 @@
 const { Router } = require("express");
-const newRouter = Router();
-const { addMessage } = require("../db");
+const { getForm, createMessage } = require("../controllers/newController");
 
-newRouter.get("/", (req, res) => res.render("form"));
-newRouter.post("/", async (req, res) => {
-	const { text, user } = req.body;
-	await addMessage({ text, user });
-	res.redirect("/");
-});
+const newRouter = Router();
+
+newRouter.get("/", getForm);
+newRouter.post("/", createMessage);
 
 module.exports = newRouter;

@@ -1,7 +1,8 @@
-// const { Router } = require("express");
+const { Router } = require("express");
+const { getIndexPage } = require("../controllers/indexController");
 
-// const indexRouter = Router();
+const indexRouter = Router();
 
-// indexRouter.
+indexRouter.get("/", getIndexPage);
 
-// module.exports = indexRouter;
+module.exports = indexRouter;

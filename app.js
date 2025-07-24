@@ -1,8 +1,10 @@
 const express = require("express");
 const path = require("path");
-const indexRouter = require("./routes/indexRouter");
+require("dotenv").config({ debug: process.env.DEBUG });
+
+// Routers
 const newRouter = require("./routes/newRouter");
-const db = require("./db");
+const indexRouter = require("./routes/indexRouter");
 
 const app = express();
 
@@ -12,13 +14,9 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: true }));
 
-const appTitle = "Message Nest";
-
-app.get("/", async (req, res) => {
-	const messages = await db.getAllMessages();
-	res.render("index", { appTitle, messages });
-});
+// Routes
+app.use("/", indexRouter);
 app.use("/new", newRouter);
 
-const PORT = process.env.PORT | 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
