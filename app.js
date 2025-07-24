@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", indexRouter);
 app.use("/new", newRouter);
 app.use("/details", detailsRouter);
+app.get("/*splat", (req, res) => {
+	res.status(404).render("error");
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
