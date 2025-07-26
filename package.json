@@ -1,29 +1,37 @@
 {
-	"name": "message-nest",
-	"version": "1.0.0",
-	"description": "",
-	"main": "app.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "node --watch app.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/guptadheerajj/message-nest.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/guptadheerajj/message-nest/issues"
-	},
-	"homepage": "https://github.com/guptadheerajj/message-nest#readme",
-	"dependencies": {
-		"date-fns": "^4.1.0",
-		"ejs": "^3.1.10",
-		"express": "^5.1.0"
-	},
-	"devDependencies": {
-		"dotenv": "^17.2.0"
-	}
+  "name": "message-nest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guptadheerajj/message-nest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guptadheerajj/message-nest/issues"
+  },
+  "homepage": "https://github.com/guptadheerajj/message-nest#readme",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.32.0",
+    "@eslint/json": "^0.13.1",
+    "@eslint/markdown": "^7.1.0",
+    "dotenv": "^17.2.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.3.0",
+    "prettier": "3.6.2"
+  }
 }
