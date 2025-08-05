@@ -16,9 +16,9 @@
   <ul>
     <% messages.forEach(message => { %>
     <li>
-      <div>User: <%= message.user %></div>
+      <div>User: <%= message.username %></div>
       <div>Message: <%=message.text %></div>
-      <div>Day: <%= message.added %></div>
+      <div>Day: <%= message.date %></div>
       <button data-message-id="<%= message.id %>"><a href="/details?id=<%= message.id %>">Open Message Details</a></button>
     </li>
     <% }); %>
