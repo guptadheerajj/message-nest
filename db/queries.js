@@ -9,6 +9,7 @@ async function getAllMessages() {
 async function addMessage({ text, username }) {
 	const psqlText = `INSERT INTO message_nest (text, username, date) VALUES ($1, $2, NOW());`;
 	const params = [text, username];
+	console.log(params);
 
 	await db.query(psqlText, params);
 }
